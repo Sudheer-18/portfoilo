@@ -46,7 +46,7 @@ export default function Navbar({ onNavClick }: NavbarProps) {
               isScrolled ? 'text-primary' : 'text-foreground'
             }`}
           >
-            Portfolio
+            Sudheer kosireddi
           </a>
           
           <div className="hidden md:flex items-center space-x-8">
