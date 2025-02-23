@@ -1,41 +1,37 @@
-import React from "react";
-
-const projects = [
-
-  {
-    title: "Memory Game",
-    description:
-      "A visually appealing memory card flip game with time limits and interactive features.",
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
-    technologies: ["React", "CSS", "JavaScript"],
-    live: "https://memory-game-nu-self.vercel.app/",
-  },
-  {
-    title: "E-Commerce Website",
-    description:
-      "Developed the backend for an e-commerce website for a mobile and laptop shop, including functionalities like product listings, shopping cart, and secure checkout.",
-    image:
-      "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop",
-    technologies: ["Node.js", "Express.js", "MongoDB"],
-    live: "https://github.com/Sudheer-18/horizon-tailwind-react",
-  },
-  {
-    title: "Blood Donation Statistics Tracker",
-    description:
-      "A web-based project designed to showcase blood donation statistics with interactive charts and donor categorization.",
-    image:
-      "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=1000&auto=format&fit=crop",
-    technologies: ["React.js", "Chart.js", "Node.js"],
-    live: "https://github.com/Sudheer-18/Blood_Donation",
-  }
-  
-];
+import React, { useState } from "react";
 
 const ProjectsSection = () => {
-  const openLink = (url) => {
-    if (url) window.open(url, "_blank", "noopener,noreferrer");
-  };
+  const [selectedUrl, setSelectedUrl] = useState("");
+
+  const projects = [
+    {
+      title: "Memory Game",
+      description:
+        "A visually appealing memory card flip game with time limits and interactive features.",
+      image:
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+      technologies: ["React", "CSS", "JavaScript"],
+      live: "https://memory-game-nu-self.vercel.app/",
+    },
+    {
+      title: "E-Commerce Website",
+      description:
+        "Developed the backend for an e-commerce website for a mobile and laptop shop, including functionalities like product listings, shopping cart, and secure checkout.",
+      image:
+        "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop",
+      technologies: ["Node.js", "Express.js", "MongoDB"],
+      live: "https://github.com/Sudheer-18/horizon-tailwind-react",
+    },
+    {
+      title: "Blood Donation Statistics Tracker",
+      description:
+        "A web-based project designed to showcase blood donation statistics with interactive charts and donor categorization.",
+      image:
+        "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=1000&auto=format&fit=crop",
+      technologies: ["React.js", "Chart.js", "Node.js"],
+      live: "https://github.com/Sudheer-18/Blood_Donation",
+    },
+  ];
 
   return (
     <section id="projects" className="py-20 bg-secondary/20 section-fade-up">
@@ -46,7 +42,10 @@ const ProjectsSection = () => {
             <div
               key={index}
               className="project-card overflow-hidden bg-secondary/50 border-primary/10 transition-transform transform hover:scale-105 shadow-lg rounded-lg cursor-pointer"
-              onClick={() => openLink(project.live)}
+              onClick={() => {
+                setSelectedUrl(project.live);
+                window.open(project.live, "_blank", "noopener,noreferrer");
+              }}
             >
               <div className="relative">
                 <img
