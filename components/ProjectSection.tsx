@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=1000&auto=format&fit=crop",
       technologies: ["React.js", "Chart.js", "Node.js"],
-      live: "https://github.com/Sudheer-18/Blood_Donation",
+      live: "https://blood-donation-swart-nu.vercel.app/",
     },
   ];
 
