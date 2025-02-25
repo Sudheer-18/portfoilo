@@ -20,7 +20,7 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop",
       technologies: ["Node.js", "Express.js", "MongoDB"],
-      live: "https://github.com/Sudheer-18/horizon-tailwind-react",
+      live: "https://ecommerce-website-kohl-three.vercel.app/index-two",
     },
     {
       title: "Blood Donation Statistics Tracker",
@@ -29,7 +29,7 @@ const ProjectsSection = () => {
       image:
         "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=1000&auto=format&fit=crop",
       technologies: ["React.js", "Chart.js", "Node.js"],
-      live: "https://blood-donation-swart-nu.vercel.app/",
+      live: "https://blood-donation-swart-nu.vercel.app",
     },
   ];
 
